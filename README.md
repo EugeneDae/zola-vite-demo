@@ -4,16 +4,16 @@
 
 This is a minimal working demo showing how you can neatly wire up [Zola](https://www.getzola.org/) with [Vite](https://vitejs.dev/) with very few dependencies.
 
-- Zola is an awesome static site generator that uses [Tera](https://tera.netlify.app/) template engine with Jinja2/Twig-like syntax.
-- Vite is a frontend build tool similar to Webpack, but not as convoluted.
+- Zola is a simple and clever static site generator that uses [Tera](https://tera.netlify.app/) template engine with Jinja2/Twig-like syntax.
+- Vite is a frontend build tool similar to Webpack, but easier to configure.
 
 Please note that this is **NOT** a starter project or a boilerplate.
 
 In this demo:
-- Zola is responsible for HTML processing, Vite is responsible for JS and SASS processing. If you prefer Zola to process SASS instead of Vite, it’s trivial to configure that ([see Zola docs](https://www.getzola.org/documentation/content/sass/) and my comment in `main.js`).
+- Zola is responsible for HTML processing, Vite is responsible for JS and SASS processing. If you prefer Zola to process SASS instead of Vite, it’s trivial to configure that ([see Zola docs](https://www.getzola.org/documentation/content/sass/) and my comment in [main.js](https://github.com/EugeneDae/zola-vite-demo/blob/master/js/main.js)).
 - Zola and Vite development servers run alongside.
 - Hot reload works for HTML, JS, SASS code.
-- Commands are available via `npm run` (see `package.json`).
+- Commands are available via `npm run` (see [package.json](https://github.com/EugeneDae/zola-vite-demo/blob/master/package.json)).
 - Production builds are minificated: Zola minifies HTML, Vite minifies JS and CSS.
 
 ## How to use
