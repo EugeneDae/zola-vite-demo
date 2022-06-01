@@ -1,0 +1,17 @@
+{
+  "name": "zola-vite-demo",
+  "version": "1.0.0",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.52.1",
+    "vite": "^2.9.9"
+  },
+  "scripts": {
+    "zola-serve": "zola serve",
+    "zola-build": "zola build",
+    "vite-serve": "vite serve",
+    "vite-build": "vite build",
+    "dev": "npm-run-all --parallel vite-serve zola-serve",
+    "build": "export BUILD_MODE=production && npm-run-all vite-build zola-build"
+  }
+}

@@ -1,0 +1,29 @@
+{% set build_mode = get_env(name="BUILD_MODE", default="development") %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Welcome to Zola + Vite demo</title>
+
+        {% if build_mode == "production" %}
+            {% set manifest = load_data(path="static/bundle/manifest.json") %}
+            {% for css in manifest["js/main.js"]["css"] %}
+                <link rel="stylesheet" href="bundle/{{ css }}" />
+            {% endfor %}
+        {% endif %}
+    </head>
+    <body>
+        <h1>Welcome to Zola + Vite demo</h1>
+
+        {% if build_mode == "production" %}
+            <script type="module" src="bundle/{{ manifest["js/main.js"]["file"] }}"></script>
+        {% else %}
+            <!-- development mode -->
+            <script type="module" src="http://localhost:3000/@vite/client"></script>
+            <script type="module" src="http://localhost:3000/js/main.js"></script>
+        {% endif %}
+    </body>
+</html>
