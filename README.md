@@ -10,7 +10,7 @@ This is a minimal working demo showing how you can neatly wire up [Zola](https:/
 Please note that this is **NOT** a starter project or a boilerplate.
 
 In this demo:
-- Zola is responsible for HTML processing, Vite is responsible for JS and SASS processing. If you prefer Zola to process SASS instead of Vite, it’s trivial to configure that ([see Zola docs](https://www.getzola.org/documentation/content/sass/) and my comment in [main.js](https://github.com/EugeneDae/zola-vite-demo/blob/master/js/main.js)).
+- Zola is responsible for HTML processing, Vite is responsible for JS and SASS processing. If you prefer Zola to process SASS instead of Vite, it’s trivial to configure that ([see Zola docs](https://www.getzola.org/documentation/content/sass/) and [my comment in main.js](https://github.com/EugeneDae/zola-vite-demo/blob/master/js/main.js#L5-L6)).
 - Zola and Vite development servers run alongside.
 - Hot reload works for HTML, JS, SASS code.
 - Commands are available via `npm run` (see [package.json](https://github.com/EugeneDae/zola-vite-demo/blob/master/package.json)).
@@ -25,10 +25,9 @@ In this demo:
 8. Run `npm run build` to build for production use (files will go to `public/` directory).
 
 ## Known issues
-
 1. I haven't tested the demo on Windows.
+2. Vite docs [say](https://vitejs.dev/guide/backend-integration.html#backend-integration) that  its entry should include `import 'vite/modulepreload-polyfill'`, but I'm not quite sure about its purpose ([see main.js](https://github.com/EugeneDae/zola-vite-demo/blob/master/js/main.js#L3)).
 2. If http://localhost:3000/@vite/client gives you 404, you need to open http://127.0.0.1:1111/ first. If it still doesn’t work, see [this](https://github.com/vitejs/vite/discussions/2978).
 
 ## Suggestions, questions?
-
 Just [open an issue](https://github.com/EugeneDae/zola-vite-demo/issues). Please note that issues unrelated to the purpose of this repository will be marked as closed.
