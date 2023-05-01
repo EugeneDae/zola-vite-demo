@@ -11,7 +11,7 @@
     "zola-build": "zola build",
     "vite-serve": "vite serve",
     "vite-build": "vite build",
-    "dev": "npm-run-all --parallel vite-serve zola-serve",
-    "build": "export BUILD_MODE=production && npm-run-all vite-build zola-build"
+    "dev": "mkdir -p content && npm-run-all --parallel vite-serve zola-serve",
+    "build": "export BUILD_MODE=production && mkdir -p content && npm-run-all vite-build zola-build"
   }
 }
